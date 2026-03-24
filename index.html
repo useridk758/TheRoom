@@ -3,35 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Room | Workspace</title>
+    <title>The Room | Secure Workspace</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Essential internal scripts for the portal to function -->
+    <!-- Integration for future portal functionality -->
     <script src="uv/uv.bundle.js" defer></script>
     <script src="uv/uv.config.js" defer></script>
 </head>
 <body>
-    <header>
+    <div class="background-glow"></div>
+    
+    <main class="hero-wrapper">
         <h1 id="brand">The Room</h1>
-        <nav>
-            <a href="#assets">Resources</a>
-            <a href="#portal">Portal</a>
-        </nav>
-    </header>
-
-    <main>
-        <section id="portal-entry">
-            <input type="text" id="entry-field" placeholder="Enter resource ID or URL...">
-            <button id="open-btn">Open</button>
-        </section>
-
-        <section id="assets" class="content-grid">
-            <!-- Example Asset Card -->
-            <div class="item-box">
-                <h3>Asset 01</h3>
-                <button onclick="loadItem('item-link-here')">View</button>
-            </div>
-        </section>
+        <div id="search-container">
+            <input type="text" id="main-input" placeholder="Search resources or enter URL...">
+            <button id="launch-btn">Explore</button>
+        </div>
     </main>
+
+    <!-- Hidden Owner Commands Menu -->
+    <div id="owner-panel" class="hidden">
+        <div class="panel-card">
+            <h2>Administrative Console</h2>
+            <div class="admin-grid">
+                <button onclick="adminCmd('clear')">Wipe Cache</button>
+                <button onclick="adminCmd('reboot')">Restart Engine</button>
+                <button onclick="adminCmd('logs')">View Analytics</button>
+                <button id="exit-panel">Close Console</button>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
