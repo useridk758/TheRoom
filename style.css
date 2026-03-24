@@ -1,56 +1,65 @@
+:root {
+  --primary: #3b82f6;
+  --bg: #0b0e14;
+  --card-bg: rgba(255, 255, 255, 0.05);
+}
+
 body {
-    background-color: #0f172a;
-    color: #f8fafc;
-    font-family: sans-serif;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  margin: 0;
+  background: var(--bg);
+  color: #fff;
+  font-family: 'Inter', system-ui, sans-serif;
+  background-image: radial-gradient(circle at 50% -20%, #1e293b, transparent);
 }
 
-header { padding: 3rem; }
-
-#portal-entry {
-    margin-bottom: 3rem;
-    display: flex;
-    gap: 0.5rem;
-}
-
-#entry-field {
-    padding: 12px;
-    width: 350px;
-    border-radius: 8px;
-    border: 1px solid #334155;
-    background: #1e293b;
-    color: white;
-}
-
-#open-btn {
-    padding: 12px 24px;
-    background-color: #3b82f6;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
+#brand {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  background: linear-gradient(to right, #60a5fa, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .content-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
-    width: 90%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .item-box {
-    background: #1e293b;
-    padding: 20px;
-    border-radius: 12px;
-    text-align: center;
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 24px;
+  transition: transform 0.2s, border-color 0.2s;
+  cursor: pointer;
 }
 
-.full-view {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    border: none;
+.item-box:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+  background: rgba(59, 130, 246, 0.1);
+}
+
+#entry-field {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 14px 20px;
+  color: white;
+  width: 400px;
+  outline: none;
+}
+
+#open-btn {
+  background: var(--primary);
+  box-shadow: 0 4px 14px 0 rgba(59, 130, 246, 0.39);
+  padding: 14px 28px;
+  font-weight: 600;
+  border-radius: 12px;
 }
