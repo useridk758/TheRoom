@@ -3,33 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Room | Unblocked Games & Apps</title>
+    <title>The Room | Workspace</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Essential internal scripts for the portal to function -->
+    <script src="uv/uv.bundle.js" defer></script>
+    <script src="uv/uv.config.js" defer></script>
 </head>
 <body>
-    <nav class="navbar">
-        <h1>The Room</h1>
-        <ul>
-            <li><a href="#games">Games</a></li>
-            <li><a href="#apps">Apps</a></li>
-            <li><a href="#proxy">Proxy</a></li>
-        </ul>
-    </nav>
-
-    <header class="hero">
-        <h2>Enter The Room</h2>
-        <div class="proxy-search">
-            <input type="text" id="proxy-input" placeholder="Enter URL to browse...">
-            <button onclick="launchProxy()">Go</button>
-        </div>
+    <header>
+        <h1 id="brand">The Room</h1>
+        <nav>
+            <a href="#assets">Resources</a>
+            <a href="#portal">Portal</a>
+        </nav>
     </header>
 
-    <section id="games" class="grid-section">
-        <h3>Featured Games</h3>
-        <div class="card-container" id="game-list">
-            <!-- Game cards will be injected here by script.js -->
-        </div>
-    </section>
+    <main>
+        <section id="portal-entry">
+            <input type="text" id="entry-field" placeholder="Enter resource ID or URL...">
+            <button id="open-btn">Open</button>
+        </section>
+
+        <section id="assets" class="content-grid">
+            <!-- Example Asset Card -->
+            <div class="item-box">
+                <h3>Asset 01</h3>
+                <button onclick="loadItem('item-link-here')">View</button>
+            </div>
+        </section>
+    </main>
 
     <script src="script.js"></script>
 </body>
